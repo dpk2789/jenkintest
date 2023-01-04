@@ -9,7 +9,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'dotnet build'
+        sh 'dotnet restore Solution1/Solution1.sln'
       }
     }
 
