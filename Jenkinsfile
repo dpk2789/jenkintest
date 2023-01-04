@@ -10,6 +10,7 @@ pipeline {
     stage('restore') {
       steps {
         sh 'dotnet restore Solution1/Solution1.sln'
+        sh 'ls -la'
       }
     }
 
