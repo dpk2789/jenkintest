@@ -15,7 +15,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'dotnet build Solution1/Solution1.sln'
+        sh 'dotnet build --configuration Release Solution1/Solution1.sln'
       }
     }
 
