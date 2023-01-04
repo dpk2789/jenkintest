@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('build') {
       steps {
-        powershell 'dotnet build'
+        bat 'dotnet build'
       }
     }
 
