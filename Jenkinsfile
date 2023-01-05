@@ -16,7 +16,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -f Solution1/AuthWebApi/Dockerfile .'
+        sh 'docker build -t dockerhubuser/simplecoreapp:v0.${BUILD_NUMBER} .'
       }
     }
 
