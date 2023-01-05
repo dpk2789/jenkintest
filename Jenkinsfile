@@ -22,7 +22,7 @@ pipeline {
 
     stage('login docker and push') {
       steps {
-        sh '''docker login -u shadesofweb -p Password#1 -email shadesofweb81@gmail.com
+        sh '''docker login -u shadesofweb -p Password#1 -e shadesofweb81@gmail.com
 docker push shadesofweb/webapi3:v0.${BUILD_NUMBER}'''
       }
     }
