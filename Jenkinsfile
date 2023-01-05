@@ -16,7 +16,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -f solution1/authwebapi/Dockerfile .'
+        sh 'docker build -f authwebapi/Dockerfile .'
       }
     }
 
