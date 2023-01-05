@@ -16,7 +16,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'sudo docker build -f AuthWebApi .'
+        sh 'docker build -f Solution1/AuthWebApi .'
       }
     }
 
