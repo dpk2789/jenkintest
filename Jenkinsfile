@@ -16,7 +16,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -t jenkins-master .'
+        sh 'docker build -t Solution1/AuthWebApi:v0.${BUILD_NUMBER} .'
       }
     }
 
