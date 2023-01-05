@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  authwebapi:
+    image: ${DOCKER_REGISTRY-}authwebapi
+    build:
+      context: .
+      dockerfile: AuthWebApi/Dockerfile
