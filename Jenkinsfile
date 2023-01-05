@@ -16,7 +16,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -f jenkintest .'
+        sh 'docker build -f solution1/authwebapi/dockerfile .'
       }
     }
 
