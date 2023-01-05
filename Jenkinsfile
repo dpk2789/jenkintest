@@ -16,7 +16,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -t dockerhubuser/simplecoreapp:v0.${BUILD_NUMBER} .'
+        sh 'docker build '
       }
     }
 
