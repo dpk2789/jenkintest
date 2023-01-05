@@ -16,7 +16,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -t Solution1/AuthWebApi:v0.${BUILD_NUMBER} .'
+        sh 'docker build -t solution1/authWebApi:v0.${BUILD_NUMBER} .'
       }
     }
 
