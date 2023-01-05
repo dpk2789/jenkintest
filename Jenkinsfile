@@ -9,7 +9,8 @@ pipeline {
 
     stage('restore') {
       steps {
-        sh 'dotnet restore Solution1/AuthWebApi/AuthWebApi.csproj'
+        sh '''dotnet restore Solution1/AuthWebApi/AuthWebApi.csproj
+dotnet publish -c release'''
         sh 'ls -la'
       }
     }
