@@ -17,7 +17,7 @@ dotnet publish -c release Solution1/Solution1.sln'''
 
     stage('build') {
       steps {
-        sh 'docker build -t shadesofweb/webapi3:v0.${BUILD_NUMBER} -f Solution1/AuthWebApi/Dockerfile .'
+        sh 'docker build -t shadesofweb/webapi4:v0.${BUILD_NUMBER} -f Solution1/webapi.aowproducts/Dockerfile .'
       }
     }
 
