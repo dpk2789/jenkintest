@@ -24,7 +24,7 @@ dotnet publish -c release Solution1/Solution1.sln'''
     stage('login docker and push') {
       steps {
         sh '''docker login -u shadesofweb -p Password#1
-docker push shadesofweb/webapi3:v0.${BUILD_NUMBER}'''
+docker push shadesofweb/webapi4:v0.${BUILD_NUMBER}'''
       }
     }
 
