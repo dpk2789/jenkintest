@@ -6,3 +6,10 @@ services:
     build:
       context: .
       dockerfile: AuthWebApi/Dockerfile
+
+  webapi.aowproducts:
+    image: ${DOCKER_REGISTRY-}webapiaowproducts
+    build:
+      context: .
+      dockerfile: webapi.aowproducts/Dockerfile
+
