@@ -6,10 +6,10 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-RUN dotnet build "webapi.aowproducts.csproj" -c Release -o /app/build
+RUN dotnet build "webapi.aowproducts/webapi.aowproducts.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "webapi.aowproducts.csproj" -c Release -o /app/publish
+RUN dotnet publish "webapi.aowproducts/webapi.aowproducts.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
