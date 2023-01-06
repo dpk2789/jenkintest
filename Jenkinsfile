@@ -9,14 +9,22 @@ pipeline {
 
     stage('restore') {
       steps {
-        sh 'dotnet restore Solution1/Solution1.sln'
+        sh '''dotnet restore Solution1/AuthWebApi/AuthWebApi.csproj
+dotnet publish -c release Solution1/Solution1.sln'''
         sh 'ls -la'
       }
     }
 
     stage('build') {
       steps {
-        sh 'docker build '
+        sh 'docker build -t shadesofweb/webapi3:v0.${BUILD_NUMBER} -f Solution1/AuthWebApi/Dockerfile .'
+      }
+    }
+
+    stage('login docker and push') {
+      steps {
+        sh '''docker login -u shadesofweb -p Password#1
+docker push shadesofweb/webapi3:v0.${BUILD_NUMBER}'''
       }
     }
 
