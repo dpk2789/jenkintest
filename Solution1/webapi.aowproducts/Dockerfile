@@ -6,11 +6,6 @@ EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
-COPY ["webapi.aowproducts/webapi.aowproducts.csproj", "webapi.aowproducts/"]
-RUN dotnet restore "webapi.aowproducts/webapi.aowproducts.csproj"
-COPY . .
-WORKDIR "/src/webapi.aowproducts"
 RUN dotnet build "webapi.aowproducts.csproj" -c Release -o /app/build
 
 FROM build AS publish
