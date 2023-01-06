@@ -9,7 +9,7 @@ pipeline {
 
     stage('restore') {
       steps {
-        sh '''dotnet restore Solution1/AuthWebApi/AuthWebApi.csproj
+        sh '''dotnet restore Solution1/webapi.aowproducts/webapi.aowproducts.csproj
 dotnet publish -c release Solution1/Solution1.sln'''
         sh 'ls -la'
       }
