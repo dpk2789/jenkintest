@@ -9,7 +9,7 @@ pipeline {
 
     stage('restore') {
       steps {
-        sh '''dotnet restore Solution1/AuthWebApi/AuthWebApi.csproj
+        sh '''dotnet restore Solution1/webapi.aowproducts/webapi.aowproducts.csproj
 dotnet publish -c release Solution1/Solution1.sln'''
         sh 'ls -la'
       }
@@ -17,7 +17,7 @@ dotnet publish -c release Solution1/Solution1.sln'''
 
     stage('build') {
       steps {
-        sh 'docker build -t shadesofweb/webapi3:v0.${BUILD_NUMBER} -f Solution1/AuthWebApi/Dockerfile .'
+        sh 'docker build -t shadesofweb/webapi4:v0.${BUILD_NUMBER} -f Solution1/webapi.aowproducts/Dockerfile .'
       }
     }
 
